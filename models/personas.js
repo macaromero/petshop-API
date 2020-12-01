@@ -8,4 +8,5 @@ const create = (obj) =>
     .then((result) => result)
     .catch((e) => console.log(e));
 
+    
 module.exports = {create};

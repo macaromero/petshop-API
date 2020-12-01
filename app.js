@@ -20,10 +20,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use("/productos", secured, productos);
-app.use("/categorias", secured, categorias);
-app.use("/login", login);
-app.use("/register", register);
+app.use("/petshop/admin/productos", secured, productos);
+app.use("/petshop/admin/categorias", secured, categorias);
+app.use("/petshop/login", login);
+app.use("/petshop/register", register);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

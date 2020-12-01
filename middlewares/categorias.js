@@ -1,4 +1,4 @@
-const {schemas} = require("./../schemas/categorias");
+const {schemas} = require("./../schemas/Categorias");
 
 //Validación del esquema de creación y modificación de una categoría
 const validate = (req, res, next) => {

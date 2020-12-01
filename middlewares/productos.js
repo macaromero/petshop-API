@@ -1,4 +1,4 @@
-const {schemas} = require("./../schemas/productos");
+const {schemas} = require("./../schemas/Productos");
 
 //Validación del esquema de creación de un producto
 const validateCreate = (req, res, next) => {

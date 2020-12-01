@@ -13,7 +13,7 @@ const login = async(req, res) => {
     try {
         const {usuario, password} = req.body;
         const result = await model.auth(usuario, sha1(password));
-        if (result.length === 0) res.status(401).json({message: "Usuario o contraseña incorrecta."});
+        if (result.length === 0) res.status(401).json({message: "Algún dato es incorrecto, o te olvidaste de confirmar tu registro."});
         const {id} = result;
         const token = createToken({id, usuario})
         res.json({JWT : token});
@@ -23,6 +23,5 @@ const login = async(req, res) => {
 };
 
 router.post("/", login);
-
 module.exports = router;
 
