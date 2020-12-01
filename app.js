@@ -6,9 +6,11 @@ var logger = require('morgan');
 const dotenv = require("dotenv");
 
 dotenv.config();
+const {secured} = require("./middlewares/login");
 const productos = require("./routes/productos");
 const categorias = require("./routes/categorias");
 const login = require("./routes/login");
+const register = require("./routes/register");
 
 var app = express();
 
@@ -18,9 +20,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use("/productos", productos);
-app.use("/categorias", categorias);
+app.use("/productos", secured, productos);
+app.use("/categorias", secured, categorias);
 app.use("/login", login);
+app.use("/register", register);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -35,7 +38,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  console.log(err);
 });
 
 module.exports = app;
