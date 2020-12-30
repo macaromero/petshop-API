@@ -4,7 +4,7 @@ Esta aplicación es un pequeño sistema que permite ingresar, eliminar y modific
 
 ## Inicio 
 
-Para poder poner en funcionamiento la aplicación, hay que instalar los **node_modules** y crear un archivo **.env** que contenga las siguientes variables:
+Para poder poner en funcionamiento la aplicación, hay que instalar los **node_modules**, y crear una carpeta llamada "keys" que va a contener dos archivos, el "private.pem" y el "public.pem". A cada uno hay que pegarle la clave privada y pública respectivamente, para que funcione la utilización de jsonwebtoken. A la vez, hay que crear un archivo **.env** que contenga las siguientes variables:
 
 ```
 DB_HOST = ""
