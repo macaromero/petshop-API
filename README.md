@@ -12,7 +12,6 @@ DB_PASS = ""
 DB_USER = ""
 DB_PORT = 
 DB_NAME = "petshop"
-
 ```
 
 ```
