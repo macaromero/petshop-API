@@ -62,10 +62,11 @@ const del = async (req, res) => {
     };
 }; 
 
-
+//Rutas
 router.get("/", all);
 router.get("/:id", single);
 router.post("/create", validate, create);
 router.put("/modify/:id", validate, modify);
 router.get("/delete/:id", del);
+
 module.exports = router;

@@ -14,7 +14,7 @@ const register = async({nombre, apellido, correo, tel, usuario, password} = {}) 
             correo, 
             html: `<h1 style="text-align: center; color:cadetblue;">¡Gracias por registrarte ${nombre}!</h1>
             <br>
-            <a href= "http://localhost:3000/petshop/register/verify/${confCorreo}" style="color: blueviolet;"><p style="text-align: center;">Hacé click acá para continuar</p></a>`
+            <a href= "http://localhost:3000/register/verify/${confCorreo}" style="color: blueviolet;"><p style="text-align: center;">Hacé click acá para continuar</p></a>`
         };
         await send(mailObject);
         

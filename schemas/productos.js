@@ -7,14 +7,12 @@ const schemas = {
     create: Joi.object().keys({
         nombre: Joi.string().required(),
         descripcion: Joi.string().required(),
-        imagen: Joi.string().required(),
         precioUnitario: numbers.required(),
         idCategoria: numbers.required()
     }),
     modify: Joi.object().keys({
         nombre: Joi.string(),
         descripcion: Joi.string(),
-        imagen: Joi.string(),
         precioUnitario: numbers,
         idCategoria: numbers
     })

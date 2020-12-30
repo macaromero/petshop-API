@@ -18,7 +18,7 @@ const send = async({correo, subject = "Gracias por registrarte a petshop", html}
             html: html
         };
         const {messageId} = await transporter.sendMail(info);
-        console.log(messageId);
+        //console.log(messageId);
         return messageId;
     } catch (error) {
         console.log(error);

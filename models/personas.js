@@ -1,4 +1,4 @@
-const pool = require("../utils/bd");
+const pool = require("./../utils/bd");
 const T_PERSONAS = "personas";
 
 // INSERT de una nueva persona
