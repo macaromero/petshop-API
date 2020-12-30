@@ -18,7 +18,6 @@ DB_NAME = "petshop"
 MAIL_SERVICE = ""
 MAIL_USER = ""
 MAIL_PASSWORD = ""
-
 ```
 ## Endpoints
 
@@ -34,7 +33,6 @@ correo
 tel
 usuario
 password
-
 ```
 Una vez que la petición es exitosa, el usuario recibirá un correo con una URL dinámica, a la que tendrá que acceder para poder confirmar su registro.
 ##### Login de un usuario
@@ -42,7 +40,6 @@ Una vez que el registro se confirmó, se tiene que realizar una petición a trav
 ```
 usuario
 password
-
 ```
 Si la petición es exitosa, el servidor responderá con un token que le servirá al usuario durante 7 horas.
 
@@ -61,7 +58,6 @@ nombre
 descripcion
 precioUnitario
 idCategoria
-
 ```
 ##### Modificación de un producto
 Se tiene que realizar una petición a través del método PUT a http://localhost:3000/admin/productos/modify/[id], enviar en la cabecera el campo "Authorization" con el token recibido durante el login, y en el body enviar los siguientes campos con sus respectivos valores:
@@ -70,7 +66,6 @@ nombre
 descripcion
 precioUnitario
 idCategoria
-
 ```
 En el caso de la modificación, ningún campo es obligatorio, se puede modificar el o los campos que se quiera.
 ##### Eliminación de un producto
@@ -88,13 +83,11 @@ De este modo, el usuario recibirá un json con toda la información correspondie
 Se tiene que realizar una petición a través del método POST a http://localhost:3000/admin/categorias/create, enviar en la cabecera el campo "Authorization" con el token recibido durante el login, y en el body enviar el siguiente campo con su respectivo valor:
 ```
 nombre
-
 ```
 ##### Modificación de una categoría
 Se tiene que realizar una petición a través del método PUT a http://localhost:3000/admin/categorias/modify/[id], enviar en la cabecera el campo "Authorization" con el token recibido durante el login, y en el body enviar el siguiente campo con su respectivo valor:
 ```
 nombre
-
 ```
 ##### Eliminación de una categoría
 Se tiene que realizar una petición a través del método GET a http://localhost:3000/admin/categorias/delete/[id], y enviar en la cabecera el campo "Authorization" con el token recibido durante el login. Al aprobarse la transacción, el campo "habilitado" pasará a ser "false".
