@@ -26,7 +26,7 @@ const single = async (req, res) => {
     };
 };
 
-// POST de una categoría
+// POST de una categoría para crearla
 const create = async (req, res) => {
     try {
         const {insertId} = await model.insert(req.body);
@@ -38,7 +38,7 @@ const create = async (req, res) => {
     };
 };
 
-// PUT de una categoría
+// PUT de una categoría para modificarla
 const modify = async (req, res) => {
     try {
         const {id} = req.params;
@@ -50,7 +50,7 @@ const modify = async (req, res) => {
     };
 };
 
-// Borrado de una categoría
+// Borrado de una categoría para que el campo "habilitado" pase a "false"
 const del = async (req, res) => {
     try {
         const {id} = req.params;

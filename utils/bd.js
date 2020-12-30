@@ -7,7 +7,7 @@ let pool = mysql.createPool({
     password: process.env.DB_PASS || "",
     user: process.env.DB_USER || "root",
     port: process.env.DB_PORT || 3306,
-    database: process.env.DB_NAME || "api",
+    database: process.env.DB_NAME || "petshop",
     connectionLimit: "10"
 });
 

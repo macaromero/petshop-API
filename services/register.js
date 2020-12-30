@@ -4,7 +4,7 @@ const {create : createPersona} = require("./../models/personas");
 const {create : createUsuario} = require("./../models/usuarios");
 const {send} = require("./../services/mail");
 
-// Registro de una nueva persona y usuario
+// Registro de una nueva persona y usuario a partir del GET al link de confirmación de correo
 const register = async({nombre, apellido, correo, tel, usuario, password} = {}) => {
     try {
         const {insertId : idPersona} = await createPersona({nombre, apellido, correo, tel});

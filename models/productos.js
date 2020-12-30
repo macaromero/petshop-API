@@ -4,14 +4,14 @@ const T_PRODUCTOS = "productos";
 // SELECT de todos los productos
 const get = () => 
     pool
-        .query ("SELECT id, nombre, descripcion, imagen, precioUnitario, idCategoria FROM ?? WHERE habilitado = ?", [T_PRODUCTOS, true])
+        .query ("SELECT id, nombre, descripcion, precioUnitario, idCategoria FROM ?? WHERE habilitado = ?", [T_PRODUCTOS, true])
         .then ((response) => response)
         .catch ((e) => console.log(e));
 
 // SELECT de un producto por id        
 const getSingle = (id = true) => 
     pool
-        .query ("SELECT id, nombre, descripcion, imagen, precioUnitario, idCategoria FROM ?? WHERE habilitado = ? AND id = ?", [T_PRODUCTOS, true, id])
+        .query ("SELECT id, nombre, descripcion, precioUnitario, idCategoria FROM ?? WHERE habilitado = ? AND id = ?", [T_PRODUCTOS, true, id])
         .then ((response) => response)
         .catch ((e) => console.log(e));
 

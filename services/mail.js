@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 
+// Envío de correo con un link para confirmar el registro
 const send = async({correo, subject = "Gracias por registrarte a petshop", html}) => {
     try {
         const transporter = nodemailer.createTransport({
@@ -18,7 +19,6 @@ const send = async({correo, subject = "Gracias por registrarte a petshop", html}
             html: html
         };
         const {messageId} = await transporter.sendMail(info);
-        //console.log(messageId);
         return messageId;
     } catch (error) {
         console.log(error);

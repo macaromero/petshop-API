@@ -16,7 +16,7 @@ const create = async (req, res) => {
   }
 };
 
-// GET de una url enviada por correo que verifica el registro, donde el campo "habilitado" pasa a true
+// GET de una url enviada por correo que verifica el registro, donde el campo "habilitado" pasa a "true"
 const verifyNewUser = async (req, res) => {
   try {
     const {uid} = req.params;

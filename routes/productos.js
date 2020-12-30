@@ -26,7 +26,7 @@ const single = async (req, res) => {
     };
 };
 
-// POST de un producto
+// POST de un producto para crearlo
 const create = async (req, res) => {
     try {
         const {insertId} = await model.insert(req.body);
@@ -38,7 +38,7 @@ const create = async (req, res) => {
     };
 };
 
-// PUT de un producto
+// PUT de un producto para modificarlo
 const modify = async (req, res) => {
     try {
         const {id} = req.params;
@@ -50,7 +50,7 @@ const modify = async (req, res) => {
     };
 };
 
-// Borrado de un producto
+// Borrado de un producto para que el campo "habilitado" pase a "false"
 const del = async (req, res) => {
     try {
         const {id} = req.params;
