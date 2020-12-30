@@ -95,4 +95,4 @@ Se tiene que realizar una petición a través del método GET a http://localhost
 
 
 ### Autoría ⚙
-Macarena Romero para la Diplomatura de Programación Web de la UTN.
+Macarena Romero para la Diplomatura de Programación Web Full Stack de la UTN.
